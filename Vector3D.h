@@ -78,16 +78,9 @@ public:
 
 	float angle(Vector3D& v) 
 	{
-		float d = dot(v);
+		float d = dot(v) / (magnitude() * v.magnitude());
 
 		return acos(d) * rad2deg;
-	}
-
-	void rotate(Vector3D& ang) 
-	{
-		float angleDeg = angle(ang);
-
-		Vector3D axis = cross(*this, ang);
 	}
 
 	float magnitude()
