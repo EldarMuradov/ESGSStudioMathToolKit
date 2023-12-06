@@ -63,48 +63,6 @@ public:
 		m_mat[2][2] = scale.z;
 	}
 
-	void setRotationX(float x)
-	{
-		m_mat[1][1] = cos(x);
-		m_mat[1][2] = sin(x);
-		m_mat[2][1] = -sin(x);
-		m_mat[2][2] = cos(x);
-	}
-
-	void setRotationY(float y)
-	{
-		m_mat[0][0] = cos(y);
-		m_mat[0][2] = -sin(y);
-		m_mat[2][0] = sin(y);
-		m_mat[2][2] = cos(y);
-	}
-
-	void setRotationZ(float z)
-	{
-		m_mat[0][0] = cos(z);
-		m_mat[0][1] = sin(z);
-		m_mat[1][0] = -sin(z);
-		m_mat[1][1] = cos(z);
-	}
-
-	void setRotation(const Vector3D& rotation)
-	{
-		m_mat[1][1] = cos(rotation.x);
-		m_mat[1][2] = sin(rotation.x);
-		m_mat[2][1] = -sin(rotation.x);
-		m_mat[2][2] = cos(rotation.x);
-
-		m_mat[0][0] = cos(rotation.y);
-		m_mat[0][2] = -sin(rotation.y);
-		m_mat[2][0] = sin(rotation.y);
-		m_mat[2][2] = cos(rotation.y);
-
-		m_mat[0][0] = cos(rotation.z);
-		m_mat[0][1] = sin(rotation.z);
-		m_mat[1][0] = -sin(rotation.z);
-		m_mat[1][1] = cos(rotation.z);
-	}
-
 	float getDeterminant()
 	{
 		Vector4D minor, v1, v2, v3;
