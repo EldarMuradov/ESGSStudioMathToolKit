@@ -56,13 +56,6 @@ public:
 		m_mat[3][2] = translation.z;
 	}
 
-	void setScale(const Vector3D& scale)
-	{
-		m_mat[0][0] = scale.x;
-		m_mat[1][1] = scale.y;
-		m_mat[2][2] = scale.z;
-	}
-
 	float getDeterminant()
 	{
 		Vector4D minor, v1, v2, v3;
